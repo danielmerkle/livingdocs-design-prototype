@@ -1,0 +1,17 @@
+{
+  "name": "livingdocs-engine",
+  "version": "0.13.1",
+  "homepage": "https://github.com/upfrontIO/livingdocs-engine",
+  "description": "Livingdocs Engine",
+  "private": true,
+  "ignore": [
+    "**/**",
+    "!dist/**/**"
+  ],
+  "dependencies": {
+    "editable": "0.5.2"
+  },
+  "devDependencies": {
+    "livingdocs-design-boilerplate": "git@github.com:upfrontIO/livingdocs-design-boilerplate#v0.3.0"
+  }
+}

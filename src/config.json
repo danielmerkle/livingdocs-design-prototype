@@ -1,0 +1,119 @@
+{
+  "name": "boilerplate",
+  "label": "Boilerplate",
+  "version": "0.3.0",
+  "author": "upfront.io",
+
+  "assets": {
+    "css": ["./css/bootstrap.css", "./css/prototype.css"]
+  },
+
+  "wrapper": "<div class='container doc-section'></div>",
+
+  "componentProperties": {
+    "well-large": {
+      "label": "Large",
+      "type": "option",
+      "value": "well-lg"
+    },
+	"paragraph-cols": {
+      "label": "Columns",
+      "type": "select",
+      "options": [
+      {
+          "caption": "Default"
+      },	  
+	  {
+		"caption":"1 Column",
+		"value": "one-col"
+	  },
+	  {
+		"caption":"2 Columns",
+		"value": "two-cols"
+	  }	  
+	  ]
+    },	
+    "panel-styles": {
+      "label": "Panel Styles",
+      "type": "select",
+      "options": [
+        {
+          "caption": "Default"
+        },
+        {
+          "caption": "Primary",
+          "value": "panel-primary"
+        },
+        {
+          "caption": "Success",
+          "value": "panel-success"
+        },
+        {
+          "caption": "Info",
+          "value": "panel-info"
+        },
+        {
+          "caption": "Warning",
+          "value": "panel-warning"
+        },
+        {
+          "caption": "Danger",
+          "value": "panel-danger"
+        }
+      ]
+    }
+  },
+
+  "groups": [
+    {
+      "label": "Headers",
+      "components": ["header", "hero", "h1", "h2"]
+    }, {
+      "label": "Text",
+      "components": ["p", "quote", "author"]
+    }, {
+      "label": "Images",
+      "components": ["image"]
+    }, {
+      "label": "Embeds",
+      "components": ["media"]
+    }, {
+      "label": "Lists",
+      "components": ["list-group", "list-group-item", "list-group-box-item"]
+    }, {
+      "label": "Boxes",
+      "components": ["panel", "well", "info", "separator"]
+    }, {
+      "label": "Grid",
+      "components": ["main-and-sidebar"]
+    }, {
+      "label": "Teasers",
+      "components": ["teaser"]
+    }
+  ],
+
+  "defaultComponents": {
+    "paragraph": "p",
+    "image": "image"
+  },
+
+  "defaultContent": [
+    { "component": "header" },
+    { "component": "p" }
+  ],
+
+  "prefilledComponents": {},
+
+  "metadata": [
+    {
+      "identifier": "title",
+      "type": "text",
+      "matches": ["header.title", "hero.title", "h1.title", "h2.title"]
+    },
+    {
+      "identifier": "description",
+      "type": "text",
+      "matches": ["p.text"]
+    }
+  ]
+}
