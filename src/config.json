@@ -1,15 +1,27 @@
 {
-  "name": "boilerplate",
-  "label": "Boilerplate",
-  "version": "0.3.0",
-  "author": "upfront.io",
+  "name": "prototype",
+  "label": "PROTOTYPE",
+  "version": "0.1.0",
+  "author": "nsgroup",
 
   "assets": {
     "css": ["./css/bootstrap.css", "./css/prototype.css"]
   },
 
-  "wrapper": "<div class='container doc-section'></div>",
+  "wrapper": "<div class='container'><div class='wrapper'><div id='detail' class='clearfix'><article class='article doc-section'></article></div></div></div>",
 
+"imageRatios": {
+  "16:9": {
+    "label": "16:9",
+    "ratio": "16x9"
+  },
+  "1:1": {
+    "label": "1:1",
+    "ratio": "1x1"
+  }
+},  
+  
+  
   "componentProperties": {
     "well-large": {
       "label": "Large",
@@ -21,16 +33,61 @@
       "type": "select",
       "options": [
       {
-          "caption": "Default"
+          "caption": "1 Column"
       },	  
-	  {
-		"caption":"1 Column",
-		"value": "one-col"
-	  },
 	  {
 		"caption":"2 Columns",
 		"value": "two-cols"
 	  }	  
+	  ]
+    },
+	"quote-size": {
+      "label": "Small",
+      "type": "option",
+      "value": "half"
+    },
+	"separator-size": {
+      "label": "Big",
+      "type": "option",
+      "value": "big"
+    },	
+	"dropcap": {
+      "label": "Dropcap",
+      "type": "option",
+      "value": "dropcap"
+    },		
+	"image-align": {
+      "label": "Align",
+      "type": "select",
+      "options": [
+      {
+        "caption": "Left"
+      },	  
+	  {
+		"caption":"Right",
+		"value": "right"
+	  },
+	  	  {
+		"caption":"Middle",
+		"value": "middle"
+	  },
+	  {
+		"caption":"Full",
+		"value": "full"
+	  }	  
+	  ]
+    },
+	"info-align": {
+      "label": "Align",
+      "type": "select",
+      "options": [
+      {
+        "caption": "Left"
+      },	  
+	  {
+		"caption":"Right",
+		"value": "right"
+	  }  
 	  ]
     },	
     "panel-styles": {
@@ -63,30 +120,40 @@
       ]
     }
   },
-
   "groups": [
     {
       "label": "Headers",
-      "components": ["header", "hero", "h1", "h2"]
-    }, {
+      "components": ["hero", "h1", "h2", "h3"]
+    }, 
+	{
       "label": "Text",
-      "components": ["p", "quote", "author"]
-    }, {
+      "components": ["p", "author", "lead", "quote"]
+    }, 
+	{
       "label": "Images",
-      "components": ["image"]
-    }, {
+      "components": ["image", "6images"]
+    },
+	{
+      "label": "Gallery",
+      "components": ["gallery", "image-slide"]
+    },	
+	{
       "label": "Embeds",
       "components": ["media"]
-    }, {
+    }, 
+	{
       "label": "Lists",
       "components": ["list-group", "list-group-item", "list-group-box-item"]
-    }, {
+    }, 
+	{
       "label": "Boxes",
-      "components": ["panel", "well", "info", "separator"]
-    }, {
+      "components": ["separator", "panel", "well", "info"]
+    }, 
+	{
       "label": "Grid",
       "components": ["main-and-sidebar"]
-    }, {
+    }, 
+	{
       "label": "Teasers",
       "components": ["teaser"]
     }
@@ -96,10 +163,44 @@
     "paragraph": "p",
     "image": "image"
   },
+  
+  "imageRatios": {
+    "16:9": {
+      "label": "16:9",
+      "ratio": "16x9"
+    },
+    "1:1": {
+      "label": "1:1",
+      "ratio": "1x1"
+    },
+    "4:3": {
+      "label": "4:3",
+      "ratio": "4x3"
+    },
+    "3:4": {
+      "label": "3:4",
+      "ratio": "3x4"
+    }
+  },
 
   "defaultContent": [
-    { "component": "header" },
-    { "component": "p" }
+    { "component": "hero" },
+    { "component": "lead" },
+	{ "component": "p" },
+	{ "component": "p" },
+	{ "component": "quote" },
+	{ "component": "p" },
+	{ "component": "separator" },
+	{ "component": "p" },
+	{ "component": "info" },
+	{ "component": "p" },
+	{ "component": "p" },
+	{ "component": "p" },	
+	{ "component": "image" },	
+	{ "component": "p" },
+	{ "component": "p" },	
+	{ "component": "p" },
+	{ "component": "separator" }	
   ],
 
   "prefilledComponents": {},
@@ -108,12 +209,12 @@
     {
       "identifier": "title",
       "type": "text",
-      "matches": ["header.title", "hero.title", "h1.title", "h2.title"]
+      "matches": ["hero.title", "h1.title", "h2.title"]
     },
     {
-      "identifier": "description",
+      "identifier": "title",
       "type": "text",
-      "matches": ["p.text"]
+      "matches": ["header.title"]
     }
   ]
 }

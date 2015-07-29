@@ -1,0 +1,21 @@
+<script type="ld-conf">
+{
+  "name": "image-slide",
+  "label": "Image Slide",
+  "allowedParents": ["gallery"],
+  "directives": {
+    "image": {
+      "imageRatios": ["4:3", "3:4"],
+      "allowOriginalRatio": true
+    }
+  }
+
+}
+</script>
+
+
+<li class="media-gallery-image-slide">
+  <img doc-image="image" />
+  <p class="quellverweis" doc-editable="source" doc-optional>Quelle</p>
+  <p class="bildlegende" doc-editable="caption" doc-optional>Caption</p>
+</li>
