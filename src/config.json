@@ -5,7 +5,7 @@
   "author": "nsgroup",
 
   "assets": {
-    "css": ["./css/prototype.css"] e 
+    "css": ["./css/falive.css", "./css/prototype.css"]  
   },
 
   "wrapper": "<div class='container'><div class='wrapper'><div id='detail' class='clearfix'><article class='article doc-section'></article></div></div></div>",
@@ -189,21 +189,7 @@
   "defaultContent": [
     { "component": "hero" },
     { "component": "lead" },
-	{ "component": "p" },
-	{ "component": "p" },
-	{ "component": "quote" },
-	{ "component": "p" },
-	{ "component": "separator" },
-	{ "component": "p" },
-	{ "component": "info" },
-	{ "component": "p" },
-	{ "component": "p" },
-	{ "component": "p" },	
-	{ "component": "image" },	
-	{ "component": "p" },
-	{ "component": "p" },	
-	{ "component": "p" },
-	{ "component": "separator" }	
+	{ "component": "p" }	
   ],
 
   "prefilledComponents": {},
