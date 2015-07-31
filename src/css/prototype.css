@@ -31,7 +31,7 @@
 article h1,article h2   {font-family: 'Lato', sans-serif !important; }
 article h3, article p   {font-family: 'Roboto Slab', serif !important;}
 
-
+a{color: #b7003c !important;}
 
 .container{width: 1080px; padding:0; padding-bottom:100px;}
 
